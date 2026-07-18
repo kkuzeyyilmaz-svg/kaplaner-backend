@@ -44,7 +44,7 @@ app.use('/api/contact', formLimiter, contactRouter);
 
 // İsteğe bağlı: index.html dosyasını bir üst klasöre (../) koyarsanız
 // tek başına `npm start` ile geliştirme ortamında tüm site sunulabilir.
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(__dirname));
 
 // --- hata yönetimi ---
 app.use((req, res) => res.status(404).json({ error: 'Bulunamadı.' }));
