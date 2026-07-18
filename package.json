@@ -1,16 +1,20 @@
-// Sadece yönetici uç noktaları için basit paylaşılan-anahtar doğrulaması (rezervasyon/mesaj listeleme).
-// Bu anahtara ön yüzün ihtiyacı yoktur — sadece lokantayı yöneten kişinin ihtiyacı vardır.
-function requireAdminKey(req, res, next) {
-  const provided = req.get('x-admin-key');
-  const expected = process.env.ADMIN_API_KEY;
-
-  if (!expected || expected === 'change-this-before-deploying') {
-    return res.status(500).json({ error: 'Sunucu yapılandırması eksik: ADMIN_API_KEY ayarlanmamış.' });
+{
+  "name": "kaplaner-backend",
+  "version": "1.0.0",
+  "description": "Kaplaner Lokantası web sitesi için backend API (rezervasyon, iletişim, menü)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "zod": "^3.23.8"
   }
-  if (!provided || provided !== expected) {
-    return res.status(401).json({ error: 'Yetkisiz erişim.' });
-  }
-  next();
 }
-
-module.exports = { requireAdminKey };
