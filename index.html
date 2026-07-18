@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaplaner Lokantası 1979 · Karapürçek, Ankara</title>
+<meta name="description" content="1979'dan bu yana Karapürçek'te esnaf sofrası. Lahmacun, ev yemekleri ve tatlılarıyla Altındağ'ın güvenilir lokantası.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google için zengin sonuç (rich result) desteği: işletme adı, adres, telefon, puan, fiyat aralığı -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Kaplaner Lokantası 1979",
+  "image": "https://www.kaplaner.com.tr/og-image.jpg",
+  "telephone": "+903123765838",
+  "priceRange": "₺400-₺600",
+  "servesCuisine": "Türk Mutfağı",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "397. Cd. 18/A, Karapürçek",
+    "addressLocality": "Altındağ",
+    "addressRegion": "Ankara",
+    "postalCode": "06105",
+    "addressCountry": "TR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "1993"
+  },
+  "acceptsReservations": "True",
+  "url": "https://www.kaplaner.com.tr"
+}
+</script>
+
+<style>
+  :root{
+    --ink:#211c17;
+    --charcoal:#2a231d;
+    --charcoal-2:#332b23;
+    --linen:#efe7d6;
+    --linen-dim:#e3d9c2;
+    --kiremit:#b23a21;
+    --kiremit-dim:#8f2e19;
+    --bakir:#c08a3e;
+    --zeytin:#5c6b3f;
+    --line: rgba(239,231,214,0.14);
+    --shadow: 0 20px 50px rgba(0,0,0,0.35);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--charcoal);
+    color:var(--linen);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--bakir);
+  }
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(42,35,29,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brandmark{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-weight:700;font-size:19px;}
+  .brandmark .dot{width:8px;height:8px;border-radius:50%;background:var(--kiremit);}
+  .navlinks{display:flex;gap:32px;font-size:14px;font-weight:500;}
+  .navlinks a{opacity:0.82;transition:opacity .2s;text-decoration:none;}
+  .navlinks a:hover{opacity:1;}
+  .navcta{
+    background:var(--kiremit);color:var(--linen);padding:11px 20px;
+    font-size:14px;font-weight:600;border-radius:var(--radius);text-decoration:none;
+    border:1px solid var(--kiremit);transition:background .2s;
+  }
+  .navcta:hover{background:var(--kiremit-dim);}
+  @media (max-width:860px){ .navlinks{display:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:88px 0 96px;
+    background:
+      radial-gradient(circle at 82% 8%, rgba(178,58,33,0.18), transparent 45%),
+      radial-gradient(circle at 6% 90%, rgba(92,107,63,0.15), transparent 40%);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;}
+  .hero h1{font-size:clamp(40px,5.6vw,68px);line-height:0.98;}
+  .hero h1 em{font-style:italic;color:var(--bakir);}
+  .hero p.lede{margin:22px 0 0;font-size:18px;line-height:1.6;max-width:46ch;color:var(--linen-dim);}
+  .chiprow{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 34px;}
+  .chip{
+    display:flex;align-items:center;gap:7px;
+    border:1px solid var(--line);padding:8px 14px;border-radius:100px;
+    font-size:13px;font-weight:500;background:rgba(239,231,214,0.03);
+  }
+  .chip b{font-family:'IBM Plex Mono',monospace;color:var(--bakir);}
+  .btnrow{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    padding:15px 26px;border-radius:var(--radius);font-weight:600;font-size:14.5px;
+    text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    border:1px solid transparent;cursor:pointer;transition:transform .15s ease, background .2s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--kiremit);color:var(--linen);}
+  .btn-primary:hover{background:var(--kiremit-dim);}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--linen);}
+  .btn-ghost:hover{background:rgba(239,231,214,0.06);}
+
+  /* seal */
+  .seal-wrap{display:flex;justify-content:center;position:relative;}
+  .seal{width:min(320px,80%);height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.45));}
+  .seal-ring{animation:spin 38s linear infinite;transform-origin:160px 160px;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  @media (prefers-reduced-motion: reduce){ .seal-ring{animation:none;} }
+
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .seal-wrap{order:-1;margin-bottom:8px;}
+    .seal{width:180px;}
+  }
+
+  /* ---------- section basics ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px);margin-top:10px;}
+  .rule{height:1px;background:var(--line);border:none;margin:0;}
+
+  /* ---------- status bar ---------- */
+  .statusbar{background:var(--charcoal-2);border-bottom:1px solid var(--line);}
+  .statusbar .wrap{display:flex;flex-wrap:wrap;gap:28px;padding:16px 28px;align-items:center;font-size:13.5px;}
+  .statusbar .item{display:flex;gap:8px;align-items:center;color:var(--linen-dim);}
+  .statusbar .dotstat{width:8px;height:8px;border-radius:50%;flex:none;}
+  .dotstat.open{background:#7c9c5b;}
+  .dotstat.closed{background:var(--kiremit);}
+
+  /* ---------- menu cards ---------- */
+  .menugrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .menucard{background:var(--charcoal);padding:36px 30px;position:relative;}
+  .menucard .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--bakir);}
+  .menucard h3{font-size:24px;margin:14px 0 10px;}
+  .menucard p{font-size:14.5px;line-height:1.6;color:var(--linen-dim);margin:0;}
+  .menucard svg{margin-top:18px;opacity:0.9;}
+  @media (max-width:800px){ .menugrid{grid-template-columns:1fr;} }
+
+  .menu-note{margin-top:22px;font-size:13.5px;color:var(--linen-dim);}
+  .menu-note b{color:var(--bakir);font-weight:600;}
+
+  /* ---------- about ---------- */
+  .about{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start;}
+  .about-figure{
+    background:var(--charcoal-2);border:1px solid var(--line);padding:38px;
+  }
+  .about-figure .yearlabel{font-family:'Fraunces',serif;font-size:56px;font-weight:900;color:var(--bakir);line-height:1;}
+  .about-figure .yearsub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;margin-top:8px;color:var(--linen-dim);}
+  .about-figure hr{margin:26px 0;}
+  .about-figure ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;font-size:14px;color:var(--linen-dim);}
+  .about-figure li{display:flex;gap:10px;}
+  .about-figure li b{color:var(--linen);font-weight:600;}
+  .about p{font-size:16px;line-height:1.75;color:var(--linen-dim);margin:0 0 18px;}
+  @media (max-width:860px){ .about{grid-template-columns:1fr;} }
+
+  /* ---------- reviews ---------- */
+  .ratingpanel{display:flex;align-items:baseline;gap:18px;margin-bottom:44px;flex-wrap:wrap;}
+  .ratingpanel .big{font-family:'Fraunces',serif;font-weight:900;font-size:64px;color:var(--bakir);}
+  .ratingpanel .stars{letter-spacing:2px;color:var(--bakir);font-size:20px;}
+  .ratingpanel .count{color:var(--linen-dim);font-size:14px;}
+  .reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .reviewcard{background:var(--charcoal-2);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:16px;}
+  .reviewcard .quote{font-size:15px;line-height:1.65;color:var(--linen);}
+  .reviewcard .who{display:flex;justify-content:space-between;font-size:12.5px;color:var(--linen-dim);}
+  .reviewcard .who b{color:var(--bakir);font-weight:600;}
+  @media (max-width:860px){ .reviewgrid{grid-template-columns:1fr;} }
+
+  /* ---------- forms ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media (max-width:900px){ .split{grid-template-columns:1fr;} }
+  .card{background:var(--charcoal-2);border:1px solid var(--line);padding:36px;}
+  .card h3{font-size:22px;margin-bottom:6px;}
+  .card .sub{font-size:14px;color:var(--linen-dim);margin-bottom:26px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12.5px;font-weight:600;letter-spacing:0.03em;margin-bottom:7px;color:var(--linen-dim);}
+  .field input, .field select, .field textarea{
+    width:100%;background:var(--charcoal);border:1px solid var(--line);color:var(--linen);
+    padding:12px 14px;font-family:'Inter',sans-serif;font-size:14.5px;border-radius:var(--radius);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--bakir);outline-offset:1px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .submitbtn{width:100%;padding:15px;background:var(--kiremit);border:none;color:var(--linen);font-weight:600;font-size:14.5px;border-radius:var(--radius);cursor:pointer;transition:background .2s;}
+  .submitbtn:hover{background:var(--kiremit-dim);}
+  .submitbtn:disabled{opacity:0.6;cursor:not-allowed;}
+  .formnote{margin-top:14px;font-size:13px;min-height:18px;}
+  .formnote.ok{color:#9db97a;}
+  .formnote.err{color:#e08a72;}
+
+  /* ---------- location / footer ---------- */
+  .locwrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media (max-width:900px){ .locwrap{grid-template-columns:1fr;} }
+  .infoblock{display:flex;flex-direction:column;gap:22px;}
+  .infoline{display:flex;gap:14px;font-size:15px;}
+  .infoline .k{width:120px;flex:none;color:var(--bakir);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding-top:3px;}
+  .infoline .v{color:var(--linen-dim);line-height:1.6;}
+  .hourstable{width:100%;border-collapse:collapse;font-size:14px;}
+  .hourstable td{padding:8px 0;border-bottom:1px solid var(--line);color:var(--linen-dim);}
+  .hourstable td:first-child{color:var(--linen);font-weight:500;}
+  .hourstable tr.today td{color:var(--bakir);}
+
+  footer{border-top:1px solid var(--line);padding:44px 0;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--linen-dim);}
+  footer .fbrand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;color:var(--linen);}
+
+  .skip{position:absolute;left:-999px;}
+  .skip:focus{left:16px;top:16px;background:var(--kiremit);padding:10px 16px;z-index:100;}
+
+  /* ---------- whatsapp floating button ---------- */
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:80;
+    width:58px;height:58px;border-radius:50%;
+    background:#3fae57;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px rgba(0,0,0,0.4);text-decoration:none;
+    transition:transform .15s ease;
+  }
+  .wa-float:hover{transform:scale(1.06);}
+  .wa-float svg{width:29px;height:29px;}
+  @media (max-width:600px){ .wa-float{right:16px;bottom:16px;width:52px;height:52px;} }
+
+  /* ---------- map embed ---------- */
+  .mapembed{width:100%;height:280px;border:1px solid var(--line);filter:grayscale(0.15) contrast(1.05);}
+
+  /* ---------- cookie / KVKK banner ---------- */
+  .cookiebar{
+    position:fixed;left:0;right:0;bottom:0;z-index:90;
+    background:var(--charcoal-2);border-top:1px solid var(--line);
+    padding:18px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    transform:translateY(110%);transition:transform .35s ease;
+  }
+  .cookiebar.show{transform:translateY(0);}
+  .cookiebar p{margin:0;font-size:13.5px;color:var(--linen-dim);max-width:70ch;}
+  .cookiebar .actions{display:flex;gap:10px;flex:none;}
+  .cookiebar button{
+    padding:10px 18px;font-size:13px;font-weight:600;border-radius:var(--radius);
+    border:1px solid var(--line);cursor:pointer;font-family:'Inter',sans-serif;
+  }
+  .cookiebar .accept{background:var(--kiremit);color:var(--linen);border-color:var(--kiremit);}
+  .cookiebar .reject{background:transparent;color:var(--linen-dim);}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#ana-icerik">İçeriğe geç</a>
+
+<nav>
+  <div class="wrap">
+    <div class="brandmark"><span class="dot"></span>KAPLANER <span class="mono" style="font-size:12px;font-weight:500;opacity:.6;">1979</span></div>
+    <div class="navlinks">
+      <a href="#menu">Menü</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#konum">Konum</a>
+    </div>
+    <a class="navcta" href="#rezervasyon">Rezervasyon</a>
+  </div>
+</nav>
+
+<div class="statusbar">
+  <div class="wrap">
+    <span class="item"><span class="dotstat closed" id="status-dot"></span><span id="status-text">Saat bilgisi yükleniyor…</span></span>
+    <span class="item">📍 Karapürçek, Altındağ / Ankara</span>
+    <span class="item">☎ (0312) 376 58 38</span>
+    <span class="item">₺400–600 kişi başı</span>
+  </div>
+</div>
+
+<main id="ana-icerik">
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Karapürçek · Altındağ · Ankara — Esnaf Sofrası</p>
+        <h1>Kaplaner<br><em>Lokantası.</em></h1>
+        <p class="lede">1979'dan bu yana aynı mahallede, aynı emekle: taş fırından lahmacun, ev usulü yemekler ve mahallenin güvendiği bir sofra.</p>
+        <div class="chiprow">
+          <span class="chip">★ <b>4,7</b> · 1.993 yorum</span>
+          <span class="chip">İçeride Servis</span>
+          <span class="chip">Arabaya Servis</span>
+          <span class="chip">Temassız Teslimat</span>
+        </div>
+        <div class="btnrow">
+          <a class="btn btn-primary" href="#rezervasyon">Rezervasyon Yap</a>
+          <a class="btn btn-ghost" id="yol-tarifi-btn" href="#" target="_blank" rel="noopener">Yol Tarifi Al</a>
+          <a class="btn btn-ghost" href="tel:+903123765838">(0312) 376 58 38</a>
+        </div>
+      </div>
+      <div class="seal-wrap">
+        <svg class="seal" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circlePath" d="M 160,160 m -122,0 a 122,122 0 1,1 244,0 a 122,122 0 1,1 -244,0" />
+          </defs>
+          <circle cx="160" cy="160" r="150" fill="none" stroke="#c08a3e" stroke-width="1" opacity="0.35"/>
+          <g class="seal-ring">
+            <circle cx="160" cy="160" r="122" fill="none" stroke="#c08a3e" stroke-width="1.5" opacity="0.6"/>
+            <text fill="#efe7d6" font-family="IBM Plex Mono, monospace" font-size="13.5" letter-spacing="4">
+              <textPath href="#circlePath" startOffset="2%">KAPLANER LOKANTASI • KARAPÜRÇEK ANKARA •</textPath>
+            </text>
+          </g>
+          <circle cx="160" cy="160" r="96" fill="none" stroke="#efe7d6" stroke-width="1" opacity="0.18"/>
+          <text x="160" y="150" text-anchor="middle" fill="#b23a21" font-family="Fraunces, serif" font-weight="900" font-size="46">1979</text>
+          <text x="160" y="178" text-anchor="middle" fill="#efe7d6" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="3" opacity="0.75">KURULUŞ YILI</text>
+          <path d="M 130,200 q 30,18 60,0" fill="none" stroke="#5c6b3f" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Öne Çıkanlar</p>
+        <h2>Sofranın klasikleri.</h2>
+      </div>
+      <div class="menugrid">
+        <div class="menucard">
+          <span class="num">01</span>
+          <h3>Lahmacun</h3>
+          <p>İnce açılan hamur, günlük hazırlanan iç harcı ve taş fırın — mahallenin en çok tercih ettiği klasik.</p>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="20" stroke="#c08a3e" stroke-width="1.4"/><circle cx="16" cy="18" r="1.6" fill="#b23a21"/><circle cx="26" cy="15" r="1.6" fill="#b23a21"/><circle cx="30" cy="26" r="1.6" fill="#b23a21"/><circle cx="19" cy="29" r="1.6" fill="#b23a21"/></svg>
+        </div>
+        <div class="menucard">
+          <span class="num">02</span>
+          <h3>Ev Yemekleri</h3>
+          <p>Günün çorbası ve sıcak yemekleriyle, esnaf lokantası geleneğinde hazırlanan doyurucu bir sofra.</p>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><path d="M13 20c0-6 4.5-11 10-11s10 5 10 11" stroke="#c08a3e" stroke-width="1.4"/><rect x="10" y="20" width="26" height="4" rx="2" fill="#5c6b3f" opacity="0.6"/><path d="M15 26h16l-2 8a4 4 0 0 1-4 3.4h-4a4 4 0 0 1-4-3.4z" stroke="#efe7d6" stroke-width="1.2" opacity="0.5"/></svg>
+        </div>
+        <div class="menucard">
+          <span class="num">03</span>
+          <h3>Tatlı</h3>
+          <p>Sofranın son dokunuşu için hazırlanan geleneksel tatlı seçenekleri.</p>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><rect x="12" y="14" width="22" height="18" rx="2" stroke="#c08a3e" stroke-width="1.4"/><line x1="12" y1="22" x2="34" y2="22" stroke="#c08a3e" stroke-width="1"/><line x1="18" y1="14" x2="18" y2="32" stroke="#c08a3e" stroke-width="1" opacity="0.5"/><line x1="28" y1="14" x2="28" y2="32" stroke="#c08a3e" stroke-width="1" opacity="0.5"/></svg>
+        </div>
+      </div>
+      <p class="menu-note">Kişi başı ortalama <b>₺400–600</b> aralığındadır. Güncel fiyatlar ve tam menü için lütfen arayınız veya salonu ziyaret ediniz.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="hakkimizda">
+    <div class="wrap about">
+      <div class="about-figure">
+        <div class="yearlabel">46</div>
+        <div class="yearsub">Yıldır Aynı Mahallede</div>
+        <hr class="rule">
+        <ul>
+          <li><b>1979</b> — Karapürçek'te açıldı</li>
+          <li><b>4,7 / 5</b> — 1.993 değerlendirme ortalaması</li>
+          <li><b>Bugün</b> — aynı özenle hizmete devam</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Hikaye</p>
+        <h2 style="margin:10px 0 22px;font-size:clamp(26px,3vw,34px);">Bir mahalle lokantasının kırk altı yılı.</h2>
+        <p>Kaplaner Lokantası, 1979'dan bu yana Altındağ'ın Karapürçek mahallesinde hizmet veriyor. Kuşaklar boyu aynı mahallede büyüyen müşteri kitlesiyle kurulan bu bağ, lokantanın en değerli sermayesi.</p>
+        <p>Ziyaretçi değerlendirmelerinde sıkça öne çıkan temizlik, düzen ve güler yüzlü servis, mahallenin lokantaya olan güveninin arkasındaki temel unsurlar. Salonun içeride servis, arabaya servis ve temassız teslimat seçenekleriyle her müşteriye uygun bir deneyim sunulur.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="yorumlar">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Google Yorumları</p>
+        <h2>Mahalle ne diyor?</h2>
+      </div>
+      <div class="ratingpanel">
+        <span class="big">4,7</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="count">1.993 kullanıcı değerlendirmesi</div>
+        </div>
+      </div>
+      <div class="reviewgrid">
+        <div class="reviewcard">
+          <p class="quote">"LGS sonrası kutlama yemeği için geldik; salon düzeni ve yemeklerin lezzeti kadar, servisteki ilgiden de çok memnun kaldık."</p>
+          <div class="who"><span>İbrahim A.</span><b>★★★★★</b></div>
+        </div>
+        <div class="reviewcard">
+          <p class="quote">"Karapürçek'te tercih edilebilecek temiz ve kaliteli birkaç yerden biri. Misafirle gidilebilecek güzel bir mekan olarak öneririm."</p>
+          <div class="who"><span>Gökdeniz T.</span><b>★★★★★</b></div>
+        </div>
+        <div class="reviewcard">
+          <p class="quote">"Kapıdan girer girmez güler yüzle karşılandık, mekan tertemizdi ve fiyatlar makuldü. Emeği geçen herkese teşekkürler."</p>
+          <div class="who"><span>Hilal A.</span><b>★★★★★</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="rezervasyon">
+    <div class="wrap split">
+      <div class="card">
+        <h3>Rezervasyon</h3>
+        <p class="sub">Yerinizi ayırtın, biz hazırlayalım.</p>
+        <form id="reservation-form" novalidate>
+          <div class="field-row">
+            <div class="field"><label for="r-name">Ad Soyad</label><input id="r-name" name="name" required></div>
+            <div class="field"><label for="r-phone">Telefon</label><input id="r-phone" name="phone" type="tel" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="r-date">Tarih</label><input id="r-date" name="date" type="date" required></div>
+            <div class="field"><label for="r-time">Saat</label><input id="r-time" name="time" type="time" required></div>
+          </div>
+          <div class="field"><label for="r-guests">Kişi Sayısı</label><input id="r-guests" name="guests" type="number" min="1" max="40" value="2" required></div>
+          <div class="field"><label for="r-note">Not (opsiyonel)</label><textarea id="r-note" name="note" rows="3" placeholder="Özel istekleriniz varsa yazınız"></textarea></div>
+          <button class="submitbtn" type="submit">Rezervasyonu Gönder</button>
+          <p class="formnote" id="r-note-status"></p>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Bize Ulaşın</h3>
+        <p class="sub">Sorularınız için mesaj bırakın, dönüş yapalım.</p>
+        <form id="contact-form" novalidate>
+          <div class="field"><label for="c-name">Ad Soyad</label><input id="c-name" name="name" required></div>
+          <div class="field"><label for="c-contact">Telefon veya E-posta</label><input id="c-contact" name="contact" required></div>
+          <div class="field"><label for="c-message">Mesajınız</label><textarea id="c-message" name="message" rows="5" required></textarea></div>
+          <button class="submitbtn" type="submit">Mesajı Gönder</button>
+          <p class="formnote" id="c-note-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="konum">
+    <div class="wrap locwrap">
+      <div class="infoblock">
+        <p class="eyebrow">Konum &amp; Bilgiler</p>
+        <div class="infoline"><span class="k">Adres</span><span class="v">Karapürçek, 397. Cd. 18/A, 06105 Altındağ/Ankara</span></div>
+        <div class="infoline"><span class="k">Telefon</span><span class="v"><a href="tel:+903123765838">(0312) 376 58 38</a></span></div>
+        <div class="infoline"><span class="k">Kişi Başı</span><span class="v">₺400–600</span></div>
+        <div class="infoline"><span class="k">Hizmetler</span><span class="v">İçeride servis · Arabaya servis · Temassız teslimat</span></div>
+        <div class="btnrow" style="margin-top:6px;">
+          <a class="btn btn-primary" id="yol-tarifi-btn-2" href="#" target="_blank" rel="noopener">Haritada Aç</a>
+          <a class="btn btn-ghost" href="tel:+903123765838">Hemen Ara</a>
+        </div>
+      </div>
+      <div class="infoblock">
+        <p class="eyebrow">Çalışma Saatleri</p>
+        <table class="hourstable" id="hours-table"></table>
+        <p style="font-size:12.5px;color:var(--linen-dim);margin-top:4px;">Saatler resmi tatillerde değişebilir; kesin bilgi için lütfen arayınız.</p>
+        <iframe class="mapembed" id="map-embed" src="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaplaner Lokantası konumu"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand"><span class="dot" style="width:7px;height:7px;border-radius:50%;background:var(--kiremit);"></span>Kaplaner Lokantası · 1979</div>
+    <div>Karapürçek, Altındağ/Ankara · (0312) 376 58 38</div>
+    <div id="footer-year"></div>
+  </div>
+</footer>
+
+<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="WhatsApp'tan yazın">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2.1 0-4-.6-5.6-1.6l-.4-.2-4.6 1.1 1.2-4.4-.3-.5C5.2 17.7 4.5 16.4 4.5 15 4.5 9.2 9.2 4.5 16 4.5S27.5 9.2 27.5 15 22.8 24.8 16 24.8zm6-8.7c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<div class="cookiebar" id="cookie-bar">
+  <p>Bu site, formların çalışması ve ziyaret istatistikleri için çerez kullanır. Devam ederek çerez kullanımını kabul etmiş olursunuz.</p>
+  <div class="actions">
+    <button class="reject" id="cookie-reject">Sadece Zorunlu</button>
+    <button class="accept" id="cookie-accept">Kabul Et</button>
+  </div>
+</div>
+
+<script>
+  // ---- ayarlar ----
+  const ADDRESS = "Karapürçek, 397. Cd. 18/A, 06105 Altındağ/Ankara";
+  const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
+  document.getElementById('yol-tarifi-btn').href = MAPS_URL;
+  document.getElementById('yol-tarifi-btn-2').href = MAPS_URL;
+  document.getElementById('footer-year').textContent = "© " + new Date().getFullYear() + " Kaplaner Lokantası";
+
+  document.getElementById('map-embed').src =
+    "https://maps.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+
+  // Bu numaranın WhatsApp'a kayıtlı olduğundan emin olun (sabit hat WhatsApp'ta çalışmaz).
+  const WHATSAPP_NUMBER = "903123765838";
+  const WHATSAPP_TEXT = "Merhaba, Kaplaner Lokantası'ndan rezervasyon/bilgi almak istiyorum.";
+  document.getElementById('wa-float').href =
+    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_TEXT);
+
+  // Düzenlenebilir haftalık çalışma saatleri — gerçek saatlere göre güncelleyin.
+  const HOURS = [
+    { day: "Pazartesi", open: "08:30", close: "22:00" },
+    { day: "Salı",      open: "08:30", close: "22:00" },
+    { day: "Çarşamba",  open: "08:30", close: "22:00" },
+    { day: "Perşembe",  open: "08:30", close: "22:00" },
+    { day: "Cuma",      open: "08:30", close: "22:00" },
+    { day: "Cumartesi", open: "08:30", close: "22:00" },
+    { day: "Pazar",     open: "08:30", close: "22:00" },
+  ];
+
+  function renderHours(){
+    const table = document.getElementById('hours-table');
+    const now = new Date();
+    const jsDay = now.getDay(); // 0 = Pazar
+    const idx = (jsDay + 6) % 7; // HOURS dizisiyle eşleşsin diye 0 = Pazartesi
+    table.innerHTML = HOURS.map((h,i) =>
+      `<tr class="${i===idx ? 'today':''}"><td>${h.day}</td><td>${h.open} – ${h.close}</td></tr>`
+    ).join('');
+
+    const today = HOURS[idx];
+    const [oh, om] = today.open.split(':').map(Number);
+    const [ch, cm] = today.close.split(':').map(Number);
+    const openMinutes = oh*60+om, closeMinutes = ch*60+cm;
+    const nowMinutes = now.getHours()*60 + now.getMinutes();
+    const isOpen = nowMinutes >= openMinutes && nowMinutes < closeMinutes;
+
+    document.getElementById('status-dot').className = 'dotstat ' + (isOpen ? 'open' : 'closed');
+    document.getElementById('status-text').textContent = isOpen
+      ? `Şu anda açık · ${today.close}'e kadar`
+      : `Şu anda kapalı · Açılış ${today.open}`;
+  }
+  renderHours();
+
+  // ---- API adresi: varsayılan olarak aynı origin; backend başka yerdeyse üzerine yazın ----
+  const API_BASE = window.KAPLANER_API_BASE || '';
+
+  async function handleForm(formId, endpoint, statusId, successMsg){
+    const form = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      status.className = 'formnote';
+      const btn = form.querySelector('.submitbtn');
+      btn.disabled = true;
+      const originalLabel = btn.textContent;
+      btn.textContent = 'Gönderiliyor…';
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch(API_BASE + endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const body = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(body.error || 'Sunucu hatası');
+        status.textContent = successMsg;
+        status.className = 'formnote ok';
+        form.reset();
+      } catch (err) {
+        status.textContent = 'Gönderilemedi: sunucuya ulaşılamıyor. Lütfen telefonla arayın: (0312) 376 58 38.';
+        status.className = 'formnote err';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+      }
+    });
+  }
+
+  handleForm('reservation-form', '/api/reservations', 'r-note-status', 'Rezervasyonunuz alındı, teşekkürler!');
+  handleForm('contact-form', '/api/contact', 'c-note-status', 'Mesajınız iletildi, en kısa sürede dönüş yapılacaktır.');
+
+  // ---- KVKK / çerez onay bandı ----
+  // Not: Bu basit bir teknik banner'dır, hukuki bir KVKK aydınlatma metninin yerini tutmaz.
+  // Onayı localStorage yerine bir çerezde tutuyoruz (bazı önizleme ortamlarında localStorage engellenebiliyor).
+  function getCookie(name){
+    const match = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+  function setCookie(name, value, days){
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
+  }
+
+  // Google Analytics kullanmak isterseniz GA_MEASUREMENT_ID'yi kendi ölçüm kimliğinizle değiştirin
+  // (Google Analytics hesabınızdan alınır, örn: "G-XXXXXXXXXX"). Boş bırakılırsa hiçbir şey yüklenmez.
+  const GA_MEASUREMENT_ID = "";
+
+  function loadAnalytics(){
+    if (!GA_MEASUREMENT_ID) return;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  }
+
+  const cookieBar = document.getElementById('cookie-bar');
+  const consent = getCookie('kaplaner_cookie_consent');
+  if (consent === 'accepted') {
+    loadAnalytics();
+  } else if (consent !== 'rejected') {
+    cookieBar.classList.add('show');
+  }
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    setCookie('kaplaner_cookie_consent', 'accepted', 180);
+    cookieBar.classList.remove('show');
+    loadAnalytics();
+  });
+  document.getElementById('cookie-reject').addEventListener('click', () => {
+    setCookie('kaplaner_cookie_consent', 'rejected', 180);
+    cookieBar.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>
