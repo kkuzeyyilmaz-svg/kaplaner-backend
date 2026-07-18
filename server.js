@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // --- güvenlik ve istek gövdesi ayrıştırma ---
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json({ limit: '20kb' }));
 
 const allowedOrigins = (process.env.CORS_ORIGIN || '')
